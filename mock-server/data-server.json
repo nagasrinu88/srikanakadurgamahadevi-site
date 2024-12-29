@@ -1,0 +1,68 @@
+{
+    "source": "mockoon:1.17.0",
+    "name": "Mock Server",
+    "type": "environment",
+    "endpointPrefix": "api",
+    "modifiedAt": 1698777600000,
+    "port": 3000,
+    "routes": [
+      {
+        "uuid": "get-users-route",
+        "method": "GET",
+        "endpoint": "/users",
+        "responses": [
+          {
+            "uuid": "get-users-response",
+            "statusCode": 200,
+            "label": "Fixed Users List",
+            "body": "[{\"id\":1,\"name\":\"Alice\"},{\"id\":2,\"name\":\"Bob\"}]",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "post-users-route",
+        "method": "POST",
+        "endpoint": "/users",
+        "responses": [
+          {
+            "uuid": "post-users-response",
+            "statusCode": 201,
+            "label": "Add User",
+            "body": "{\"message\":\"User added successfully\",\"data\":{{body}}}",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "get-posts-route",
+        "method": "GET",
+        "endpoint": "/posts",
+        "responses": [
+          {
+            "uuid": "get-posts-response",
+            "statusCode": 200,
+            "label": "List of Posts",
+            "body": "[{\"id\":101,\"title\":\"First Post\",\"content\":\"Hello World!\"},{\"id\":102,\"title\":\"Second Post\",\"content\":\"Welcome to Mockoon!\"}]",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

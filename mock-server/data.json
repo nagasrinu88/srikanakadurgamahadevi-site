@@ -1,0 +1,103 @@
+{
+  "uuid": "b811e51d-c954-4376-8f5f-e4bf1f4b3d7b",
+  "lastMigration": 27,
+  "name": "My API",
+  "endpointPrefix": "api",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "3e6d4499-b90d-4c1d-947d-4b82e610b4bf",
+      "documentation": "Get all users",
+      "method": "get",
+      "endpoint": "users",
+      "responses": [
+        {
+          "body": {
+            "users": [
+              {
+                "id": 1,
+                "name": "John Doe",
+                "email": "john@example.com",
+                "role": "admin"
+              },
+              {
+                "id": 2,
+                "name": "Jane Smith",
+                "email": "jane@example.com",
+                "role": "user"
+              },
+              {
+                "id": 3,
+                "name": "Bob Wilson",
+                "email": "bob@example.com",
+                "role": "user"
+              }
+            ]
+          },
+          "statusCode": 200,
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "label": "Default response"
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "uuid": "4f7d5599-c90e-5c2e-958d-5b93e710b5cf",
+      "documentation": "Get all posts",
+      "method": "get",
+      "endpoint": "posts",
+      "responses": [
+        {
+          "uuid": "b3546ef4-ac7f-4b61-9e2c-4f4d2798f464",
+          "body": {
+            "posts": [
+              {
+                "id": 1,
+                "title": "Post 1",
+                "body": "This is the body of post 1"
+              }
+            ]
+          },
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "default": true
+        }
+      ],
+      "enabled": true
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [],
+  "proxyResHeaders": []
+}
